@@ -1,0 +1,235 @@
+<!--
+Documento criado por WILTON RICARDO DE SOUZA PINHEIRO com a finalidade de criar/executar um exercicio de WEB1 no IFCE Professor harley macedo
+//-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projeto Web 1</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+
+</head>
+<body>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Inicio</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Calculadora</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Parcelar</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="sena-tab" data-toggle="tab" href="#sena" role="tab" aria-controls="sena" aria-selected="false">Mega-Sena</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  	<div id="div1">
+  	<h1 id="h1"class="text-monospace">Projeto WEB 1</h1>
+	<h2 class="text-monospace">Aluno:Wilton Ricardo de Souza Pinheiro</h2>
+	</div>
+	<button id="button"class="btn btn-outline-dark">Fade-Out</button>
+	<button id="button2"class="btn btn-outline-dark">Fade-In</button>
+	<script type="text/javascript">
+		$(document).ready(function(){
+				$("#button").click(function(){
+						$("#div1").fadeOut(1000);
+				});
+				$("#button2").click(function(){
+						$("#div1").fadeIn(1000);
+				});
+		});			
+	</script>
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+	<link rel="stylesheet" type="text/css" href="calculadora.css">
+  <div class="container">
+  <div class="row">
+    <div class="col-3">
+
+    </div>
+    <div class="col" >
+    	  	<form id="form_calculadora" method="post"><br>
+		<input type="text" name="campo" id="texto" class="texto">
+		<input type="button" class="btn btn-outline-dark"  value="CE" name="limpar">
+		<input type="button" class="btn btn-outline-dark"  value="1" name="botao">
+		<input type="button" class="btn btn-outline-dark"  value="2" name="botao">
+		<input type="button" class="btn btn-outline-dark"  value="3" name="botao">
+		<input type="button" class="btn btn-outline-dark"  value="*" name="botao"><br>
+		<input type="button" class="btn btn-outline-dark"  value="4" name="botao">
+		<input type="button" class="btn btn-outline-dark"  value="5" name="botao">
+		<input type="button" class="btn btn-outline-dark"  value="6" name="botao">
+		<input type="button" class="btn btn-outline-dark"  value="/" name="botao"><br>
+		<input type="button" class="btn btn-outline-dark"  value="7" name="botao">
+		<input type="button" class="btn btn-outline-dark"  value="8" name="botao">
+		<input type="button" class="btn btn-outline-dark"  value="9" name="botao">
+		<input type="button" class="btn btn-outline-dark"  value="+" name="botao"><br>
+		<input type="button" class="btn btn-outline-dark"  value="0" name="botao">
+		<button type="button" id="botao3" class="btn btn-outline-dark" value="*" name="botao3">%</button>
+		<input type="button" class="btn btn-outline-dark"  value="-" name="botao">
+		<input type="button" class="btn btn-outline-dark"  value="="  name="botao2">
+		
+		
+		
+<!--
+script jquery para calculadora
+//-->		
+	</form>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#botao3").click(function(){
+			$('.texto').val($('.texto').val()/100+$(this).val());
+		});
+
+		$("input[name=botao]").click(function(){
+			$('.texto').val($('.texto').val()+$(this).val());
+		});
+		$("input[name=botao2]").click(function(){
+			$('.texto').val(eval(texto.value));
+		});
+		$("input[name=limpar]").click(function(){
+			$('.texto').val('');
+		});
+	});
+</script>
+<!--
+fim do script jquery para calculadora
+//-->		
+    </div>
+    <div class="col-3">
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+   <div class="container">
+  <div class="row">
+    <div class="col-3">
+      
+    </div>
+    <div class="col-6">
+            <h2 class="text-monospace">Parcelar:</h2>
+            <form>
+                <input type="text" id="valor" placeholder="valor" style="font-size:40px;"><br><br>
+                <input type="text" id="nparcelas" placeholder="parcelas"style="font-size:40px;" ><br><br>
+                <input  type="button" id="calculars" class="btn btn-outline-dark" value="Calcular" style="height:60px;width: 160px;font-size:40px;">
+                <input  type="button" id="limpars" class="btn btn-outline-dark" value="Limpar" style="height:60px;width: 160px;font-size:40px;"><br><br>
+            </form>
+ <!--
+script jquery para parcelamento
+//-->		       
+        <script type="text/javascript">
+    $(document).ready(function(){
+    	$('#limpars').attr("disabled", true); 
+        $("#calculars").click(function(){
+            
+            $('#table').show();
+			var valor  = $('#valor').val();
+			valor = parseFloat(valor);
+			var parcelas = $('#nparcelas').val();
+			parcelas = parseFloat(parcelas);
+			var table = '';
+			var x = 1;
+			if($('#nparcelas').val()>4){
+			   var aux = ((valor*0.10)+valor)/parcelas;
+			 }else{
+			    var aux = $('#valor').val()/parcelas;
+			 }
+			 while (x <= $('#nparcelas').val()) {
+			   table += '<tr><td>' + $('#valor').val() + '</td>';
+			   table += '<td>'+ x +'</td>';
+			   table += '<td>'+aux+'</td></tr>';
+			   x++;
+			  }
+			 $('#table tbody').html(table);
+			    if(document.getElementById("calculars").disabled = true){
+			        document.getElementById("limpars").disabled = false;
+			    }
+			 $('#calculars').attr("disabled", true);  
+			 $('#limpars').attr("disabled",false);  
+			});
+        	$("#limpars").click(function(){
+        		$('#table tbody').html("");
+        		$('#calculars').attr("disabled", false);	
+  				$('#limpars').attr("disabled", true);	
+
+        	});
+    });
+</script>
+<!--
+fim do script jquery para parcelamento
+//-->		
+        <div id="tabel">
+            <table id="table" class="table table-dark">
+            	<thead>
+                	<tr>
+				      <th class="text-monospace">Valor Total</th>
+				      <th class="text-monospace">Parcela(s)</th>
+				      <th class="text-monospace">Valor das Parcelas</th>
+				    </tr>
+            	</thead>
+            	<tbody>
+           	 	</tbody>
+        	</table>
+    	</div>
+  </div>
+    </div>
+    <div class="col-3">
+    
+    </div>
+  </div>
+</div>
+
+<div class="tab-pane fade" id="sena" role="tabpanel" aria-labelledby="sena-tab">
+  <div class="container">
+  <div class="row">
+    <div class="col-3">
+      
+    </div>
+    <div class="col-6">
+      <h2>
+    <p id="sortear" class="text-monospace" >Sortear 6 numeros para vencer:</p>
+  </h2>  	
+  <input  type="button" id="botao1" class="btn btn-outline-dark" value="Sortear Numeros" style="width: 225px;height:50px;font-size: 20px;">
+  <input  type="button" id="botao0" class="btn btn-outline-dark" value="Sortear Novamente" style="width: 225px;height:50px;font-size: 20px;">
+    <p class='letra' id="numero1" class="text-monospace" style="font-size: 59px;"> </p>
+    <!--
+script jquery para sorteamento
+//-->		
+    <script type="text/javascript">
+  $(document).ready(function(){
+      $('#botao0').attr("disabled", true);  
+  		$('#botao1').click(function(){
+        var vetor = new Array(6);
+  		for(var x=0;x<vetor.length;x++){
+        	vetor[x]=Math.floor((Math.random() * 60) + 1);
+        }
+       	 $('#botao1').attr("disabled", true);
+         $("#numero1").html(vetor[0]+' '+vetor[1]+' '+vetor[2]+' '+vetor[3]+' '+vetor[4]+' '+vetor[5]);
+         $('#botao0').attr("disabled", false);
+   		});
+   	  $('#botao0').click(function(){
+        $("#numero1").html("");
+        $('#botao1').attr("disabled", false);	
+  		$('#botao0').attr("disabled", true);	
+  	});
+  });
+</script>
+<!--
+fim do script jquery para sorteamento
+//-->		
+    </div>
+  </div>
+ 
+</div>
+
+</div>
+</body>
+</html>
